@@ -1,0 +1,14 @@
+@import '../styles/variables.scss';
+
+.Container {
+  &.fullWidth {
+    display: flex;
+    justify-content: center;
+  }
+  
+  &.maxWidth {
+    max-width: 1200px;
+    padding: $space;
+    width: 100%;
+  }
+}
