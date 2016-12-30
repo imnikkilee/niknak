@@ -10,18 +10,32 @@
   }
 
   .gridHeadline {
-    margin: $spacePx*9 0 $spacePx*6;
+    margin: $spacePx*7 0 $spacePx*4;
     max-width: 900px;
     text-align: center;
+
+    @include respond-to(medium-screen) {
+      margin: $spacePx*9 0 $spacePx*6;
+    }
   }
 
   div[class$='Row'] {
     display: flex;
-    margin: 0 0 $spacePx*4 0;
+    flex-direction: column;
+    margin: 0 0 $spacePx*2 0;
     width: 100%;
 
     &:last-of-type {
       margin: 0;
+    }
+
+    @include respond-to(medium-screen) {
+      flex-direction: row;
+      margin: 0 0 $spacePx*4 0;
+
+      &:last-of-type {
+        margin: 0;
+      }
     }
   }
 
@@ -45,12 +59,30 @@
   }
 
   .stdTextCol {
-    margin: 0 columns(1, 24) 0 0;
-    width: columns(8, 24);
+    width: 100%;
+    margin: 0 0 $spacePx*2 0;
+
+    @include respond-to(medium-screen) {
+      margin: 0 columns(1, 16) 0 0;
+      width: columns(6, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0 columns(1, 24) 0 0;
+      width: columns(8, 24);
+    }
   }
 
   .stdImage {
-    width: columns(15, 24);
+    width: 100%;
+
+    @include respond-to(medium-screen) {
+      width: columns(9, 16);
+    }
+
+    @include respond-to(large-screen) {
+      width: columns(15, 24);
+    }
   }
 
   // Showers
@@ -58,14 +90,97 @@
   .showerRow {
     align-items: center;
   }
-  
-  .showerImage {
-    margin: 0 columns(1, 24) 0 0;
-    width: columns(17, 24);
-  }
 
   .showerTextCol {
-    width: columns(6, 24);
+    width: 100%;
+    margin: 0 0 $spacePx*2 0;
+
+    @include respond-to(medium-screen) {
+      order: 2;
+      width: columns(6, 16);
+    }
+
+    @include respond-to(large-screen) {
+      width: columns(6, 24);
+    }
+  }
+  
+  .showerImage {
+    width: 100%;
+
+    @include respond-to(medium-screen) {
+      margin: 0 columns(1, 16) 0 0;
+      order: 1;
+      width: columns(9, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0 columns(1, 24) 0 0;
+      width: columns(17, 24);
+    }
   }
 
+  // Weddings
+
+  .wedOneRow {
+    align-items: center;
+  }
+
+  .wedTextCol {
+    width: 100%;
+    margin: 0 0 $spacePx*2 0;
+
+    @include respond-to(medium-screen) {
+      margin: 0 columns(1, 16) 0 0;
+      width: columns(6, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0 columns(1, 24) 0 0;
+      width: columns(8, 24);
+    }
+  }
+
+  .wedInviteImage {
+    width: 100%;
+
+    @include respond-to(medium-screen) {
+      width: columns(9, 16);
+    }
+
+    @include respond-to(large-screen) {
+      width: columns(15, 24);
+    }
+  }
+
+  .wedSuiteImage {
+    width: 100%;
+  }
+
+  .wedSignImage {
+    width: 100%;
+    margin: 0 0 $spacePx*2 0;
+
+    @include respond-to(medium-screen) {
+      margin: 0 columns(1, 16) 0 0;
+      width: columns(6, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0 columns(1, 24) 0 0;
+      width: columns(10, 24);
+    }
+  }
+
+  .wedEnvelopeImage {
+    width: 100%;
+
+    @include respond-to(medium-screen) {
+      width: columns(9, 16);
+    }
+
+    @include respond-to(large-screen) {
+      width: columns(13, 24);
+    }
+  }
 }

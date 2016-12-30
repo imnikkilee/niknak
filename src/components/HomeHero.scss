@@ -23,13 +23,15 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    padding-bottom: $spacePx*4;
+    padding-top: ($spacePx+92px);
     // 92px is a magic number, height of navigation
-    padding: ($spacePx+92px) 0 $spacePx*4;
     text-align: center;
 
-    @include respond-to(tiny-screen) {
+    @include respond-to(small-screen) {
       height: 600px;
-      padding: 0;
+      padding-bottom: 0;
+      padding-top: 0;
     }
   }
 
