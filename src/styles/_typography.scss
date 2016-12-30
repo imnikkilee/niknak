@@ -1,5 +1,33 @@
 h1 {
-  font-size: px-to-rem($space*4);
+  font-size: px-to-rem(64);
   font-family: $fontSans;
   font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+h2 {
+  font-size: px-to-rem(32);
+  font-family: $fontSerif;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h3 {
+  font-size: px-to-rem(26);
+  font-family: $fontSans;
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  font-size: px-to-rem(18);
+  font-family: $fontSerif;
+  line-height: 1.5;
+  margin: 0 0 $spacePx 0;
+
+  &:last-of-type {
+    margin: 0;
+  }
 }

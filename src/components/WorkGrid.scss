@@ -1,0 +1,71 @@
+@import '../styles/utils.scss';
+@import '../styles/variables.scss';
+
+.WorkGrid {
+
+  .innerContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gridHeadline {
+    margin: $spacePx*9 0 $spacePx*6;
+    max-width: 900px;
+    text-align: center;
+  }
+
+  div[class$='Row'] {
+    display: flex;
+    margin: 0 0 $spacePx*4 0;
+    width: 100%;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  h3[class$='Headline'] {
+    color: $colorSecondary;
+    margin: 0 0 $spacePx 0;
+
+    &.alt {
+      color: $colorPrimary;
+    }
+  }
+
+  img {
+    height: 100%;
+  }
+
+  // Save the Dates
+
+  .stdRow {
+    align-items: center;
+  }
+
+  .stdTextCol {
+    margin: 0 columns(1, 24) 0 0;
+    width: columns(8, 24);
+  }
+
+  .stdImage {
+    width: columns(15, 24);
+  }
+
+  // Showers
+
+  .showerRow {
+    align-items: center;
+  }
+  
+  .showerImage {
+    margin: 0 columns(1, 24) 0 0;
+    width: columns(17, 24);
+  }
+
+  .showerTextCol {
+    width: columns(6, 24);
+  }
+
+}

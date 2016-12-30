@@ -12,7 +12,9 @@ class HomeHero extends Component {
     return (
       <Container size={'fullWidth'} className='HomeHero'>
         <Container size={'maxWidth'} className='innerContainer'>
-          <h1 className='headline'><Logo className='headlineLogo'/> is a super cool little design studio</h1>
+          <h1 className='headline'>
+            <Logo className='headlineLogo'/> is a super cool little design studio
+          </h1>
         </Container>
       </Container>
     )
