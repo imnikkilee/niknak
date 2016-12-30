@@ -1,6 +1,47 @@
+@import '../styles/utils.scss';
 @import '../styles/variables.scss';
 
 .HomeHero {
   background: $colorAccent;
   color: $colorPrimary;
+  position: relative;
+
+  &:after {
+    background-image: url(../images/abstract-pattern-1.png);
+    background-position: bottom center;
+    background-size: cover;
+    bottom: -80px;
+    content: '';
+    display: block;
+    position: absolute;
+    height: calc(100% + 80px);
+    opacity: .2;
+    width: 100%;
+  }
+
+  .innerContainer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    // 92px is a magic number, height of navigation
+    padding: ($spacePx+92px) 0 $spacePx*4;
+    text-align: center;
+
+    @include respond-to(tiny-screen) {
+      height: 600px;
+      padding: 0;
+    }
+  }
+
+  .headline {
+    margin: 0;
+    max-width: 800px;
+  }
+
+  .headlineLogo {
+    bottom: -2px;
+    fill: $colorPrimary;
+    position: relative;
+    width: 241px;
+  }
 }

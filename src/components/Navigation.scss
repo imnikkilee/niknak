@@ -1,2 +1,15 @@
+@import '../styles/variables.scss';
+
 .Navigation {
+  left: 0;
+  padding: $spacePx*2 0;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+
+  .navLogo {
+    display: block;
+    fill: $colorBlack;
+    width: 120px;
+  }
 }
