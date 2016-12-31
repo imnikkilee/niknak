@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 // Components
+import FooterCta from './FooterCta';
 import HomeHero from './HomeHero';
 import Navigation from './Navigation';
 import WorkGrid from './WorkGrid';
@@ -15,6 +16,7 @@ class App extends Component {
         <Navigation/>
         <HomeHero/>
         <WorkGrid/>
+        <FooterCta/>
       </div>
     )
   }

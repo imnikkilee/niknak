@@ -7,6 +7,11 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    padding-bottom: $spacePx*4;
+
+    @include respond-to(medium-screen) {
+      padding-bottom: $spacePx*6;
+    }
   }
 
   .gridHeadline {
@@ -68,8 +73,8 @@
     }
 
     @include respond-to(large-screen) {
-      margin: 0 columns(1, 24) 0 0;
-      width: columns(8, 24);
+      margin: 0 columns(1, 24) 0 columns(2, 24);
+      width: columns(7, 24);
     }
   }
 
@@ -81,7 +86,7 @@
     }
 
     @include respond-to(large-screen) {
-      width: columns(15, 24);
+      width: columns(14, 24);
     }
   }
 
@@ -163,12 +168,12 @@
 
     @include respond-to(medium-screen) {
       margin: 0 columns(1, 16) 0 0;
-      width: columns(6, 16);
+      width: columns(5, 16);
     }
 
     @include respond-to(large-screen) {
       margin: 0 columns(1, 24) 0 0;
-      width: columns(10, 24);
+      width: columns(9, 24);
     }
   }
 
@@ -176,11 +181,104 @@
     width: 100%;
 
     @include respond-to(medium-screen) {
+      width: columns(10, 16);
+    }
+
+    @include respond-to(large-screen) {
+      width: columns(14, 24);
+    }
+  }
+
+  // Greeting Cards
+  .cardRow {
+    align-items: center;
+  }
+
+  .cardTextCol {
+    width: 100%;
+    margin: 0 0 $spacePx*2 0;
+
+    @include respond-to(medium-screen) {
+      margin: 0 0 0 columns(1, 16);
+      order: 2;
+      width: columns(6, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0 0 0 columns(1, 24);
+      width: columns(8, 24);
+    }
+  }
+
+  .cardImage {
+    width: 100%;
+
+    @include respond-to(medium-screen) {
       width: columns(9, 16);
     }
 
     @include respond-to(large-screen) {
+      width: columns(15, 24);
+    }
+  }
+
+  // Everything Else
+  .otherOneRow {
+    align-items: center;
+  }
+
+  .otherTextCol {
+    width: 100%;
+    margin: 0 0 $spacePx*2 0;
+
+    @include respond-to(medium-screen) {
+      margin: 0 columns(1, 16) 0 0;
+      width: columns(6, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0 columns(1, 24) 0 columns(2, 24);
+      width: columns(7, 24);
+    }
+  }
+
+  .otherSummerImage {
+    width: 100%;
+
+    @include respond-to(medium-screen) {
+      width: columns(9, 16);
+    }
+
+    @include respond-to(large-screen) {
+      width: columns(14, 24);
+    }
+  }
+
+
+  .otherThanksImage {
+    width: 100%;
+    margin: 0 0 $spacePx*2 0;
+
+    @include respond-to(medium-screen) {
+      margin: 0 columns(1, 16);
+      width: columns(9, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0 columns(1, 24) 0 0;
       width: columns(13, 24);
+    }
+  }
+
+  .otherSpringImage {
+    width: 100%;
+
+    @include respond-to(medium-screen) {
+      width: columns(6, 16);
+    }
+
+    @include respond-to(large-screen) {
+      width: columns(10, 24);
     }
   }
 }
