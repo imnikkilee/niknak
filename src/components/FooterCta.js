@@ -11,7 +11,6 @@ class FooterCta extends Component {
     return (
       <Container size={'fullWidth'} className='FooterCta'>
         <Container size={'maxWidth'} className='innerContainer'>
-          cta
         </Container>
       </Container>
     )
