@@ -9,8 +9,8 @@ import WorkGrid from '../components/WorkGrid';
 class Home extends Component {
   render() {
     return (
-      <div className='App'>
-        <Navigation />
+      <div>
+        <Navigation current='what-we-do' floating/>
         <HomeHero/>
         <WorkGrid/>
         <FooterCta/>
