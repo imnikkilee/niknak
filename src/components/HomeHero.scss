@@ -23,9 +23,9 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    padding-bottom: $spacePx*4;
-    padding-top: ($spacePx+92px);
-    // 92px is a magic number, height of navigation
+    padding-bottom: $spacePx * 4;
+    padding-top: ($spacePx + 123px);
+    // 123px is a magic number, height of navigation
     text-align: center;
 
     @include respond-to(small-screen) {

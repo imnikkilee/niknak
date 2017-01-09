@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 
 // Components
+import BlankHero from '../components/BlankHero';
 import FooterCta from '../components/FooterCta';
 import ProcessGrid from '../components/ProcessGrid';
-import Navigation from '../components/Navigation';
 
 class HowWeDoIt extends Component {
   render() {
     return (
       <div>
-        <Navigation current='how-we-do-it'/>
+        <BlankHero className='opt2'/>
         <ProcessGrid />
         {/*<FooterCta/>*/}
       </div>

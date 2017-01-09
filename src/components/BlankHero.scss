@@ -1,0 +1,35 @@
+@import '../styles/utils.scss';
+@import '../styles/variables.scss';
+
+.BlankHero {
+  background: $colorAccent;
+  color: $colorPrimary;
+  // 123px is a magic number, height of navigation
+  height: 123px;
+  position: relative;
+
+  &:after {
+    background-image: url(../images/abstract-pattern-1-rag.png);
+    background-position: bottom center;
+    background-size: cover;
+    bottom: -80px;
+    content: '';
+    display: block;
+    position: absolute;
+    height: calc(100% + 80px);
+    opacity: .15;
+    width: 100%;
+  }
+
+  &.opt2 {
+    &:after {
+      background-image: url(../images/abstract-pattern-2-rag.png);
+    }
+  }
+
+  &.opt3 {
+    &:after {
+      background-image: url(../images/abstract-pattern-3-rag.png);
+    }
+  }
+}

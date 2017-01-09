@@ -1,35 +1,11 @@
 @import '../styles/variables.scss';
 
 .Navigation {
-  background: $colorAccent;
-  padding: $spacePx*2 0;
-  position: relative;
-
-  &:after {
-    background-image: url(../images/abstract-pattern-3-rag.png);
-    background-position: bottom center;
-    background-size: cover;
-    bottom: -80px;
-    content: '';
-    display: block;
-    position: absolute;
-    height: calc(100% + 80px);
-    opacity: .15;
-    width: 100%;
-    z-index: 0;
-  }
-
-  &.floating {
-    background: none;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: 1;
-
-    &:after {
-      display: none;
-    }
-  }
+  left: 0;
+  padding: $spacePx*3 0;
+  position: absolute;
+  right: 0;
+  z-index: 1;
 
   nav {
     display: flex;
@@ -43,43 +19,44 @@
     width: 120px;
   }
 
-  .navLinks {
+  .navList {
     align-items: flex-end;
     display: flex;
     justify-content: flex-end;
     flex-grow: 1;
     margin: 0;
     padding: 0;
+  }
 
-    li {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      font-weight: 700;
+  .navListItem {
+    list-style-type: none;
+    margin: 0 0 0 $spacePx;
+    padding: 0;
+  }
 
-      &.navLink {
-        border-bottom: 3px solid rgba(0,0,0,0);
-        line-height: 1;
-        margin: 0 0 0 $spacePx;
-        padding: 0 0 $spacePx/2 0;
+  .navLink {
+    border-bottom: 3px solid rgba(0,0,0,0);
+    color: $colorBlack;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0 0 $spacePx/2;
+    text-decoration: none;
 
-        &.current {
-          border-color: $colorSecondary;
-        }
+    &.active {
+      border-color: $colorSecondary;
+    }
 
-        a {
-          color: $colorBlack;
-          text-decoration: none;
-        }
-      }
+    &.navButton {
+      background: $colorSecondary;
+      border-radius: $borderRadius;
+      border: 3px solid rgba(0,0,0,0);
+      color: #fff;
+      padding: $spacePx/2-3 $spacePx $spacePx/2;
 
-      &.navContactButton {
-        background: $colorSecondary;
-        border-radius: $borderRadius;
-        color: #fff;
-        line-height: 1;
-        padding: 8px $spacePx 11px;
-        margin: 0 0 0 $spacePx;
+      &.active {
+        background: none;
+        border: 3px solid $colorSecondary;
+        color: $colorSecondary;
       }
     }
   }
