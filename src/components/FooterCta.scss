@@ -27,7 +27,7 @@
 
     @include respond-to(medium-screen) {
       flex-direction: row;
-      align-items: flex-end;
+      align-items: center;
     }
   }
 
