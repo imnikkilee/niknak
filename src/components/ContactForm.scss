@@ -1,0 +1,26 @@
+@import '../styles/utils.scss';
+@import '../styles/variables.scss';
+
+.ContactForm {
+
+  .innerContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: $spacePx*4;
+
+    @include respond-to(medium-screen) {
+      padding-bottom: $spacePx*2;
+    }
+  }
+  
+  .contactHeadline {
+    margin: $spacePx*7 0 $spacePx*4;
+    max-width: 900px;
+    text-align: center;
+
+    @include respond-to(medium-screen) {
+      margin: $spacePx*9 0 $spacePx*6;
+    }
+  }
+}
