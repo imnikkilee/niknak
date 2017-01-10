@@ -49,12 +49,12 @@
     }
 
     @include respond-to(medium-screen) {
-      section {
-        padding-bottom: $spacePx*3;
+      padding-bottom: $spacePx*3.75;
+      margin-bottom: $spacePx*3;
 
-        &:last-of-type {
-          padding: 0;
-        }
+      &:last-of-type {
+        padding: 0;
+        margin: 0;
       }
     }
 

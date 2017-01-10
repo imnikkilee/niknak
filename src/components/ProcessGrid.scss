@@ -16,7 +16,7 @@
 
   .gridHeadline {
     margin: $spacePx*7 0 $spacePx*4;
-    max-width: 800px;
+    max-width: 900px;
     text-align: center;
 
     @include respond-to(medium-screen) {
@@ -24,30 +24,58 @@
     }
   }
 
-  div[class$='Row'] {
-    border-bottom: 2px solid rgba($colorPrimary, .11);
+  section[class$='Row'] {
     display: flex;
     flex-direction: column;
-    padding: 0 0 $spacePx*2 0;
+    padding: 0 0 $spacePx*2.5 0;
     margin: 0 0 $spacePx*2 0;
+    position: relative;
     width: 100%;
 
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: rgba($colorPrimary, .22);
+      height: 2px;
+      width: 25%;
+      bottom: 0;
+    }
+
     &:last-of-type {
-      border: none;
       padding: 0;
       margin: 0;
+
+      &:after {
+        display: none;
+      }
     }
 
     @include respond-to(medium-screen) {
       flex-direction: row;
       flex-wrap: wrap;
-      padding: 0 0 $spacePx*6 0;
-      margin: 0 0 $spacePx*6 0;
+      padding-bottom: $spacePx*3.75;
+      margin-bottom: $spacePx*3;
 
       &:last-of-type {
-        border: none;
         padding: 0;
         margin: 0;
+      }
+    }
+
+    @include respond-to(large-screen) {
+      border-bottom: 2px solid rgba($colorPrimary, .22);
+      padding-bottom: $spacePx*5;
+      margin-bottom: $spacePx*5;
+
+      &:after {
+        display: none;
+      }
+
+      &:last-of-type {
+        padding: 0;
+        margin: 0;
+        border: none;
       }
     }
   }
@@ -61,35 +89,6 @@
 
     @include respond-to(large-screen) {
       margin-bottom: $spacePx
-    }
-  }
-
-  div[class$='OneCol'] {
-    width: 100%;
-    margin: 0 0 $spacePx*2 0;
-
-    @include respond-to(medium-screen) {
-      margin: 0 columns(2, 16) 0 0;
-      width: columns(7, 16);
-    }
-
-    @include respond-to(large-screen) {
-      margin: 0 columns(2, 24) 0 columns(2, 24);
-      width: columns(9, 24);
-    }
-  }
-
-  div[class$='TwoCol'] {
-    width: 100%;
-
-    @include respond-to(medium-screen) {
-      margin: 0;
-      width: columns(7, 16);
-    }
-
-    @include respond-to(large-screen) {
-      margin: 0 columns(2, 24) 0 0;
-      width: columns(9, 24);
     }
   }
 
@@ -109,18 +108,54 @@
     }
   }
 
+  .consOneCol {
+    width: 100%;
+    margin: 0 0 $spacePx*2 0;
+
+    @include respond-to(medium-screen) {
+      margin: 0 columns(2, 16) 0 0;
+      width: columns(7, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0 columns(2, 24) 0 columns(2, 24);
+      width: columns(9, 24);
+    }
+  }
+
+  .consTwoCol {
+    width: 100%;
+
+    @include respond-to(medium-screen) {
+      margin: 0;
+      width: columns(7, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0 columns(2, 24) 0 0;
+      width: columns(9, 24);
+    }
+  }
+
   .consThreeCol {
+    align-items: flex-start;
     display: flex;
-    align-items: center;
     flex-direction: column;
     width: 100%;
     margin: $spacePx*2 0 0 0;
+
+    @include respond-to(medium-screen) {
+      align-items: center;
+    }
   }
 
   .consSubHeadline {
-    max-width: 500px;
-    text-align: center;
+    max-width: 350px;
     margin: 0 0 $spacePx 0;
+
+    @include respond-to(medium-screen) {
+      text-align: center;
+    }
   }
 
   .consCTA {
@@ -138,6 +173,35 @@
     }
   }
 
+  .quoteOneCol {
+    width: 100%;
+    margin: 0 0 $spacePx*2 0;
+
+    @include respond-to(medium-screen) {
+      margin: 0 columns(2, 16) 0 0;
+      width: columns(7, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0 columns(2, 24) 0 columns(2, 24);
+      width: columns(9, 24);
+    }
+  }
+
+  .quoteTwoCol {
+    width: 100%;
+
+    @include respond-to(medium-screen) {
+      margin: 0;
+      width: columns(7, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0 columns(2, 24) 0 0;
+      width: columns(9, 24);
+    }
+  }
+
   // Design
 
   .designRow {
@@ -147,9 +211,39 @@
   }
 
   .designOneCol {
+    width: 100%;
+    margin: 0 0 $spacePx*2 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+
+    @include respond-to(medium-screen) {
+      order: 2;
+      margin: 0 0 0 columns(2, 16);
+      width: columns(7, 16);
+    }
+
+    @include respond-to(large-screen) {
+      order: 1;
+      margin: 0 columns(2, 24) 0 columns(2, 24);
+      width: columns(9, 24);
+    }
+  }
+
+  .designTwoCol {
+    width: 100%;
+
+    @include respond-to(medium-screen) {
+      order: 1;
+      margin: 0;
+      width: columns(7, 16);
+    }
+
+    @include respond-to(large-screen) {
+      order: 2;
+      margin: 0 columns(2, 24) 0 0;
+      width: columns(9, 24);
+    }
   }
 
   // Prod
@@ -160,9 +254,37 @@
     }
   }
 
-  .prodTwoCol {
+  .prodOneCol {
+    width: 100%;
+    margin: 0 0 $spacePx*2 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+
+    @include respond-to(medium-screen) {
+      order: 2;
+      margin: 0 0 0 columns(2, 16);
+      width: columns(7, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0 columns(2, 24) 0 0;
+      width: columns(9, 24);
+    }
+  }
+
+  .prodTwoCol {
+    width: 100%;
+
+    @include respond-to(medium-screen) {
+      order: 1;
+      margin: 0;
+      width: columns(7, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0 columns(2, 24) 0 columns(2, 24);
+      width: columns(9, 24);
+    }
   }
 }
