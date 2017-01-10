@@ -11,7 +11,7 @@ class Home extends Component {
       <div>
         <HomeHero/>
         <WorkGrid/>
-        <FooterCta/>
+        <FooterCta displayHowWeDoIt displayContactUs/>
       </div>
     )
   }

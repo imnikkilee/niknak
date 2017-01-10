@@ -9,9 +9,9 @@ class HowWeDoIt extends Component {
   render() {
     return (
       <div>
-        <BlankHero className='opt2'/>
+        <BlankHero className='opt3'/>
         <ProcessGrid />
-        {/*<FooterCta/>*/}
+        <FooterCta displayWhatWeDo displayContactUs/>
       </div>
     )
   }
