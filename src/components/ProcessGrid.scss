@@ -23,4 +23,146 @@
       margin: $spacePx*9 0 $spacePx*6;
     }
   }
+
+  div[class$='Row'] {
+    border-bottom: 1px solid rgba($colorPrimary, .15);
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 $spacePx*2 0;
+    margin: 0 0 $spacePx*2 0;
+    width: 100%;
+
+    &:last-of-type {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    @include respond-to(medium-screen) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 0 0 $spacePx*4 0;
+      margin: 0 0 $spacePx*4 0;
+
+      &:last-of-type {
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  h3[class$='Headline'] {
+    margin-bottom: $spacePx*2;
+
+    @include respond-to(medium-screen) {
+      margin-bottom: $spacePx;
+    }
+
+    @include respond-to(large-screen) {
+      margin-bottom: $spacePx
+    }
+  }
+
+  div[class$='OneCol'] {
+    width: 100%;
+    margin: 0 0 $spacePx*2 0;
+
+    @include respond-to(medium-screen) {
+      margin: 0 columns(1, 16) 0 0;
+      width: columns(7, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0 columns(2, 24) 0 columns(2, 24);
+      width: columns(9, 24);
+    }
+  }
+
+  div[class$='TwoCol'] {
+    width: 100%;
+
+    @include respond-to(medium-screen) {
+      margin: 0;
+      width: columns(8, 16);
+    }
+
+    @include respond-to(large-screen) {
+      margin: 0;
+      width: columns(11, 24);
+    }
+  }
+
+  .illus {
+    max-width: 100%;
+    height: auto;
+  }
+
+  // Consultations
+
+  .consHeadline {
+    width: 100%;
+
+    @include respond-to(large-screen) {
+      margin-left: columns(2, 24);
+      width: columns(22, 24);
+    }
+  }
+
+  .consThreeCol {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: $spacePx*2 0 0 0;
+  }
+
+  .consSubHeadline {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 0 $spacePx 0;
+  }
+
+  .consCTA {
+    @include button($colorSecondary);
+  }
+
+  // Quote
+
+  .quoteHeadline {
+    width: 100%;
+
+    @include respond-to(large-screen) {
+      margin-left: columns(2, 24);
+      width: columns(22, 24);
+    }
+  }
+
+  // Design
+
+  .designRow {
+    @include respond-to(medium-screen) {
+      align-items: center;
+    }
+  }
+
+  .designOneCol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Prod
+
+  .prodRow {
+    @include respond-to(medium-screen) {
+      align-items: center;
+    }
+  }
+
+  .prodTwoCol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

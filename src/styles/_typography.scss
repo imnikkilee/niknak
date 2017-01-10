@@ -15,10 +15,27 @@ h2 {
 }
 
 h3 {
+  color: $colorSecondary;
   font-size: px-to-rem(27);
   font-family: $fontSans;
   font-weight: 700;
   margin: 0;
+
+  &.alt {
+    color: $colorPrimary;
+  }
+}
+
+h4 {
+  color: $colorSecondary;
+  font-size: px-to-rem(21);
+  font-family: $fontSans;
+  font-weight: 700;
+  margin: 0;
+
+  &.alt {
+    color: $colorPrimary;
+  }
 }
 
 p {
@@ -27,7 +44,18 @@ p {
   line-height: 1.5;
   margin: 0 0 $spacePx 0;
 
-  &:last-of-type {
+  &:last-child {
+    margin: 0;
+  }
+}
+
+ul {
+  font-size: px-to-rem(18);
+  font-family: $fontSerif;
+  line-height: 1.5;
+  margin: 0 0 $spacePx 0;
+
+  &:last-child {
     margin: 0;
   }
 }

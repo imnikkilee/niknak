@@ -45,12 +45,7 @@
   }
 
   h3[class$='Headline'] {
-    color: $colorSecondary;
     margin: 0 0 $spacePx 0;
-
-    &.alt {
-      color: $colorPrimary;
-    }
   }
 
   img {

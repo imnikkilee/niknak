@@ -1,3 +1,5 @@
+@import '../styles/variables.scss';
+
 // px-to
 // @param {Int} px
 // @param {String} unit
@@ -35,4 +37,27 @@
 // Columns
 @function columns($cols, $totalCols) {
   @return (100% / $totalCols) * $cols;
+}
+
+// Buttons
+@mixin buttonBase($color) {
+  border-radius: $borderRadius;
+  line-height: 1;
+  background: $color;
+  font-weight: 700;
+  font-family: $fontSans;
+  text-decoration: none;
+  color: #fff;
+}
+
+@mixin button($color) {
+  @include buttonBase($color);
+  padding: $spacePx*.75 $spacePx*2 $spacePx;
+  font-size: px-to-rem(18);
+}
+
+@mixin smallButton($color) {
+  @include buttonBase($color);
+  padding: $spacePx/2-3 $spacePx $spacePx/2;
+  font-size: px-to-rem(16);
 }
