@@ -28,7 +28,7 @@ class ContactForm extends Component {
               <textarea name='message' placeholder='Include information like project description, deadline, and budget to jumpstart your project.'></textarea>
             </p>
             <p>
-              <button type='submit'>send!</button>
+              <button>send!</button>
             </p>
           </form>
         </Container>
