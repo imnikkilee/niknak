@@ -14,7 +14,7 @@ class ContactForm extends Component {
           <h2 className='contactHeadline'>
             We’d love to hear from you! Let us know what’s on your mind.
           </h2>
-          <form name='contact' netlify='true'>
+          <form name='contact' data-netlify='true'>
             <p>
               <label>name</label>
               <input type='text' name='name' />
