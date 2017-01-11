@@ -1,0 +1,64 @@
+form {
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  p {
+    margin: 0 0 $spacePx*2 0;
+  }
+
+  label {
+    display: block;
+    font-size: px-to-rem(14);
+    font-family: $fontSans;
+    font-weight: 700;
+    color: $colorSecondary;
+    margin: 0 0 $spacePx/2 0;
+    line-height: 1;
+  }
+
+  input,
+  textarea {
+    box-sizing: border-box;
+    display: block;
+    -webkit-appearance: none;
+    font-family: $fontSerif;
+    border: 2px solid rgba($colorPrimary, .22);
+    transition: all .2s;
+    border-radius: $borderRadius;
+    font-size: px-to-rem(16);
+    padding: $spacePx;
+    color: $colorBlack;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      border: 2px solid rgba($colorPrimary, .55);
+    }
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: rgba($colorBlack, .44);
+      font-style: italic;
+    }
+
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: rgba($colorBlack, .44);
+      font-style: italic;
+    }
+
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: rgba($colorBlack, .44);
+      font-style: italic;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+      color: rgba($colorBlack, .44);
+      font-style: italic;
+    }
+  }
+
+  button {
+    align-self: center;
+  }
+}

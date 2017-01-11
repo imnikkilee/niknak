@@ -20,7 +20,7 @@
     text-align: center;
 
     @include respond-to(medium-screen) {
-      margin: $spacePx*9 0 $spacePx*6;
+      margin: $spacePx*8 0 $spacePx*4.5;
     }
   }
 

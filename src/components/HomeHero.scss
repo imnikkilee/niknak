@@ -10,11 +10,11 @@
     background-image: url(../images/abstract-pattern-1-rag.png);
     background-position: bottom center;
     background-size: cover;
-    bottom: -80px;
+    bottom: -100px;
     content: '';
     display: block;
     position: absolute;
-    height: calc(100% + 80px);
+    height: calc(100% + 100px);
     opacity: .15;
     width: 100%;
   }
@@ -29,7 +29,7 @@
     text-align: center;
 
     @include respond-to(small-screen) {
-      height: 600px;
+      height: 550px;
       padding-bottom: 0;
       padding-top: 0;
     }

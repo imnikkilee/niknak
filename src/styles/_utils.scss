@@ -41,6 +41,7 @@
 
 // Buttons
 @mixin buttonBase($color) {
+  border: none;
   border-radius: $borderRadius;
   line-height: 1;
   background: $color;

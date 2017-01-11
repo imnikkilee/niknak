@@ -10,17 +10,26 @@
     padding-bottom: $spacePx*4;
 
     @include respond-to(medium-screen) {
-      padding-bottom: $spacePx*2;
+      padding-bottom: $spacePx*6;
     }
   }
-  
+
   .contactHeadline {
     margin: $spacePx*7 0 $spacePx*4;
-    max-width: 900px;
+    max-width: 700px;
     text-align: center;
 
     @include respond-to(medium-screen) {
-      margin: $spacePx*9 0 $spacePx*6;
+       margin: $spacePx*8 0 $spacePx*4.5;
     }
+  }
+
+  .contactFormBody {
+    width: 100%;
+    max-width: $spacePx*30;
+  }
+
+  .submitButton {
+    @include button($colorSecondary);
   }
 }
