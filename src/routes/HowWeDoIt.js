@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 // Components
 import BlankHero from '../components/BlankHero';
+import Footer from '../components/Footer';
 import FooterCta from '../components/FooterCta';
 import ProcessGrid from '../components/ProcessGrid';
 
@@ -12,6 +13,7 @@ class HowWeDoIt extends Component {
         <BlankHero className='opt3'/>
         <ProcessGrid />
         <FooterCta displayWhatWeDo displayContactUs/>
+        <Footer/>
       </div>
     )
   }

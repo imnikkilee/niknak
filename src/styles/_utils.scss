@@ -41,14 +41,25 @@
 
 // Buttons
 @mixin buttonBase($color) {
-  border: none;
+  border: 3px solid rgba($color, 0);
   border-radius: $borderRadius;
+  cursor: pointer;
   line-height: 1;
   background: $color;
   font-weight: 700;
   font-family: $fontSans;
   text-decoration: none;
   color: #fff;
+  transition: all .2s ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $color;
+    background: none;
+    color: $color;
+    outline: none;
+  }
 }
 
 @mixin button($color) {

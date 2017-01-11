@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 // Components
 import BlankHero from '../components/BlankHero';
 import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer';
 import FooterCta from '../components/FooterCta';
 
 class ContactUs extends Component {
@@ -11,7 +12,7 @@ class ContactUs extends Component {
       <div>
         <BlankHero className='opt3' />
         <ContactForm />
-        <FooterCta displayWhatWeDo displayHowWeDoIt />
+        <Footer />
       </div>
     )
   }

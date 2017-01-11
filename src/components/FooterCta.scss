@@ -13,15 +13,15 @@
     display: block;
     position: absolute;
     height: 100%;
-    opacity: .11;
+    opacity: .22;
     width: 100%;
   }
 
   .innerContainer {
     display: flex;
     flex-direction: column;
-    padding-bottom: $spacePx*4;
-    padding-top: $spacePx*4;
+    padding-bottom: $spacePx*5;
+    padding-top: $spacePx*5;
     position: relative;
     z-index: 1;
 
