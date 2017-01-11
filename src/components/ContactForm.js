@@ -14,7 +14,7 @@ class ContactForm extends Component {
           <h2 className='contactHeadline'>
             We’d love to hear from you! Let us know what’s on your mind.
           </h2>
-          <form name='contact' data-netlify='true'>
+          <form name='contact' action='https://formspree.io/hello@niknak.design'>
             <p>
               <label>name</label>
               <input type='text' name='name' />
@@ -24,11 +24,11 @@ class ContactForm extends Component {
               <input type='text' name='email' />
             </p>
             <p>
-              <label>name</label>
+              <label>message</label>
               <textarea name='message' placeholder='Include information like project description, deadline, and budget to jumpstart your project.'></textarea>
             </p>
             <p>
-              <button>send!</button>
+              <button type='submit'>send!</button>
             </p>
           </form>
         </Container>
