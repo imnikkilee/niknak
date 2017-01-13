@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
+import classnames from 'classnames';
 import validator from 'validator';
 
 // Components
@@ -7,6 +8,14 @@ import Container from './Container';
 
 // Styles
 import './ContactForm.scss';
+
+function isValidLength(value) {
+  return value.length >= 1;
+}
+
+function isValidEmail(value) {
+  return value.length >= 1 && validator.isEmail(value);
+}
 
 class ContactForm extends Component {
 
@@ -17,13 +26,14 @@ class ContactForm extends Component {
       nameError: false,
       email: '',
       emailError: false,
+      emailBlurred: false,
       message: '',
       messageError: false
     }
   }
 
   handleNameChange = (e) => {
-    if (e.target.value.length < 1) {
+    if (!isValidLength(e.target.value)) {
       this.setState({
         nameError: true,
         name: e.target.value
@@ -36,12 +46,35 @@ class ContactForm extends Component {
     }
   }
 
-  handleEmailChange = (e) => {
-    if (!validator.isEmail(e.target.value)) {
+  handleEmailBlur = (e) => {
+    if (!isValidEmail(e.target.value)) {
       this.setState({
+        emailBlurred: true,
         emailError: true,
         email: e.target.value
       });
+    } else {
+      this.setState({
+        emailBlurred: true,
+        emailError: false,
+        email: e.target.value
+      });
+    }
+  }
+
+  handleEmailChange = (e) => {
+    if (this.state.emailBlurred) {
+      if (!isValidEmail(e.target.value)) {
+        this.setState({
+          emailError: true,
+          email: e.target.value
+        });
+      } else {
+        this.setState({
+          emailError: false,
+          email: e.target.value
+        });
+      }
     } else {
       this.setState({
         emailError: false,
@@ -51,7 +84,7 @@ class ContactForm extends Component {
   }
 
   handleMessageChange = (e) => {
-    if (e.target.value.length < 1) {
+    if (!isValidLength(e.target.value)) {
       this.setState({
         messageError: true,
         message: e.target.value
@@ -71,28 +104,33 @@ class ContactForm extends Component {
       formEmail: this.state.email,
       formMessage: this.state.message
     }
-    if (formData.formName.length < 1) {
+    let error = false;
+    if (!isValidLength(formData.formName)) {
+      error = true;
       this.setState({
         nameError: true
       });
     }
-    if (formData.formEmail.length < 1 || !validator.isEmail(formData.formEmail)) {
+    if (!isValidEmail(formData.formEmail)) {
+      error = true;
       this.setState({
         emailError: true
       });
     }
-    if (formData.formMessage.length < 1) {
+    if (!isValidLength(formData.formMessage)) {
+      error = true;
       this.setState({
         messageError: true
       });
     }
-    if (this.state.nameError || this.state.emailError || this.state.messageError) {
+    if (error) {
       return false;
     }
     $.ajax({
       url: 'https://formspree.io/hello@niknak.design',
       type: 'POST',
       data: formData,
+      dataType: 'json',
       success: function(data) {
         if (confirm('Thank you for your message. Can I erase the form?')) {
          document.querySelector('.form-input').val('');
@@ -111,24 +149,88 @@ class ContactForm extends Component {
   };
 
   render() {
+
+    const {
+      name,
+      nameError,
+      email,
+      emailError,
+      emailBlurred,
+      message,
+      messageError
+    } = this.state;
+
     return (
       <Container size='fullWidth' className='ContactForm'>
         <Container size='maxWidth' className='innerContainer'>
           <h2 className='contactHeadline'>
             We're excited to hear from you! Let us know what’s on your mind.
           </h2>
-          <form name='contact' onSubmit={this.handleSubmit} className='contactFormBody'>
+          <form
+            name='contact'
+            onSubmit={this.handleSubmit}
+            className='contactFormBody' >
             <p>
               <label htmlFor='formName'>name</label>
-              <input id='formName' className='form-input' type='name' name='name' onChange={this.handleNameChange} value={this.state.name}/>
+              <input
+                id='formName'
+                className={classnames(['form-input', nameError: 'error'])}
+                type='text'
+                name='name'
+                onChange={this.handleNameChange}
+                onBlur={this.handleNameChange}
+                value={name} />
+              {(() => {
+                if (nameError) {
+                  return (
+                    <span className='formError'>
+                      please include your name
+                    </span>
+                  );
+                }
+              })()}
             </p>
             <p>
               <label htmlFor='formEmail'>email</label>
-              <input id='formEmail' className='form-input' type='text' name='email' onChange={this.handleEmailChange} value={this.state.email}/>
+              <input
+                id='formEmail'
+                className='form-input'
+                type='text'
+                name='email'
+                onChange={this.handleEmailChange}
+                onBlur={this.handleEmailBlur}
+                value={email} />
+              {(() => {
+                if (emailError) {
+                  return (
+                    <span className='formError'>
+                      please include a valid email
+                    </span>
+                  );
+                }
+              })()}
             </p>
             <p>
               <label htmlFor='formMessage'>message</label>
-              <textarea id='formMessage' className='form-input' name='message' rows='5' placeholder='Include information like project description, deadline, and budget to jumpstart your project.' onChange={this.handleMessageChange} value={this.state.message}></textarea>
+              <textarea
+                id='formMessage'
+                className='form-input'
+                name='message'
+                rows='5'
+                placeholder='A description of the project you have in mind would be awesome here.'
+                onChange={this.handleMessageChange}
+                onBlur={this.handleMessageChange}
+                value={message} >
+              </textarea>
+              {(() => {
+                if (messageError) {
+                  return (
+                    <span className='formError'>
+                      please include a message
+                    </span>
+                  );
+                }
+              })()}
             </p>
             <button
               className='submitButton'

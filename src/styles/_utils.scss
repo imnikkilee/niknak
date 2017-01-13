@@ -52,13 +52,17 @@
   color: #fff;
   transition: all .2s ease-in-out;
 
-  &:hover,
-  &:focus,
-  &:active {
+  &:active,
+  &:hover {
     border-color: $color;
     background: none;
     color: $color;
+  }
+
+  &:focus {
     outline: none;
+    box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.11);
+    transform: scale(1.01);
   }
 }
 

@@ -5,7 +5,8 @@ form {
   align-items: stretch;
 
   p {
-    margin: 0 0 $spacePx*2 0;
+    position: relative;
+    margin: 0 0 $spacePx*2.5 0;
   }
 
   label {
@@ -60,5 +61,15 @@ form {
 
   button {
     align-self: center;
+  }
+
+  .formError {
+    bottom: -20px;
+    color: $colorError;
+    display: block;
+    font-family: $fontSans;
+    font-size: px-to-rem(12);
+    font-weight: 700;
+    position: absolute;
   }
 }
