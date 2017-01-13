@@ -9,7 +9,7 @@
   position: relative;
 
   &:after {
-    background-image: url(../images/abstract-pattern-1-rag.png);
+    background-image: url(../images/abstract-pattern-1-rag-small.png);
     background-position: bottom center;
     background-size: cover;
     bottom: -100px;
@@ -17,19 +17,19 @@
     display: block;
     position: absolute;
     height: calc(100% + 100px);
-    opacity: .22;
+    opacity: .18;
     width: 100%;
   }
 
   &.opt2 {
     &:after {
-      background-image: url(../images/abstract-pattern-2-rag.png);
+      background-image: url(../images/abstract-pattern-2-rag-small.png);
     }
   }
 
   &.opt3 {
     &:after {
-      background-image: url(../images/abstract-pattern-3-rag.png);
+      background-image: url(../images/abstract-pattern-3-rag-small.png);
     }
   }
 }

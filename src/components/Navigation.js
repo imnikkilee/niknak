@@ -1,6 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import {IndexLink, Link} from 'react-router';
-import classnames from 'classnames';
 
 // Components
 import Container from './Container';

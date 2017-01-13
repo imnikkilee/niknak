@@ -4,7 +4,6 @@ import React, {Component} from 'react';
 import BlankHero from '../components/BlankHero';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
-import FooterCta from '../components/FooterCta';
 
 class ContactUs extends Component {
   render() {

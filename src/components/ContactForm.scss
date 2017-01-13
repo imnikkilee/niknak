@@ -12,6 +12,30 @@
     @include respond-to(medium-screen) {
       padding-bottom: $spacePx*6;
     }
+
+    &.formFailure {
+      .contactHeadline {
+        color: $colorError;
+      }
+    }
+
+    &.formSuccess {
+      .contactHeadline {
+        color: $colorSecondary;
+      }
+    }
+
+    &.formFailure,
+    &.formSuccess {
+      .contactHeadline {
+        max-width: 500px;
+        margin: $spacePx*7 0 $spacePx*2;
+
+        @include respond-to(medium-screen) {
+           margin: $spacePx*8 0 $spacePx*2.5;
+        }
+      }
+    }
   }
 
   .contactHeadline {
@@ -31,5 +55,9 @@
 
   .submitButton {
     @include button($colorSecondary);
+  }
+
+  .resetButton {
+    @include button($colorPrimary);
   }
 }
