@@ -50,7 +50,7 @@ class WorkGrid extends Component {
                   Wedding Stationery
                 </h3>
                 <p>
-                  Your wedding stationery should be as awesome as you are! That’s why we design  with your wants, needs, hopes, dreams, and budget in mind.
+                  Your wedding stationery should be as  awesome as you are! That’s why we design  with your wants, needs, hopes, dreams, and budget in mind.
                 </p>
                 <p>We’re happy to create invitation suites, printed envelopes, thank you cards, custom maps, signage, table numbers, and anything else your heart desires.
                 </p>
