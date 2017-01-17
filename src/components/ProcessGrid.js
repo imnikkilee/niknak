@@ -31,7 +31,7 @@ class ProcessGrid extends Component {
               </ul>
             </div>
             <div className='consTwoCol'>
-              <p>This is also a great time to share any inspiration you’ve gathered, so we can get a sense of your style and personality. Some great sources of inspiration are:</p>
+              <p>This is also a great time to share any inspiration you’ve gathered, so we can get a sense of your style and personality.  Some great sources of inspiration are:</p>
               <ul>
                 <li>Pinterest boards you've put together</li>
                 <li>designs you really love</li>
