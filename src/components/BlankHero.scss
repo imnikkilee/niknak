@@ -4,32 +4,38 @@
 .BlankHero {
   background: $colorAccent;
   color: $colorPrimary;
-  // 123px is a magic number, height of navigation
-  height: 123px;
+  // 132px is a magic number, height of navigation
+  height: 132px;
   position: relative;
 
+  @include respond-to(medium-screen) {
+    // 123px is a magic number, height of navigation
+    height: 123px;
+  }
+
   &:after {
-    background-image: url(../images/abstract-pattern-1-rag-small.png);
+    background-image: url(../images/abstract-pattern-1.png);
     background-position: bottom center;
-    background-size: cover;
-    bottom: -100px;
+    background-repeat: no-repeat;
+    background-size: 2000px auto;
+    bottom: -80px;
     content: '';
     display: block;
     position: absolute;
-    height: calc(100% + 100px);
+    height: calc(100% + 80px);
     opacity: .18;
     width: 100%;
   }
 
   &.opt2 {
     &:after {
-      background-image: url(../images/abstract-pattern-2-rag-small.png);
+      background-image: url(../images/abstract-pattern-2.png);
     }
   }
 
   &.opt3 {
     &:after {
-      background-image: url(../images/abstract-pattern-3-rag-small.png);
+      background-image: url(../images/abstract-pattern-3.png);
     }
   }
 }

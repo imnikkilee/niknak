@@ -32,7 +32,7 @@ class WorkGrid extends Component {
             <div className='inviteRow'>
               <div className='inviteTextCol'>
                 <h3 className='inviteHeadline'>
-                  Custom Invitations
+                  Invitations
                 </h3>
                 <p>
                   Whether you’re throwing a surprise party or hosting a shower, we can help you tell your guests when and where the party’s at with custom invitations.

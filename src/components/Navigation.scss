@@ -3,15 +3,29 @@
 
 .Navigation {
   left: 0;
-  padding: $spacePx*3 0;
+  padding: $spacePx*2 0;
   position: absolute;
   right: 0;
   z-index: 1;
 
+  @include respond-to(medium-screen) {
+    padding: $spacePx*3 0;
+  }
+
   nav {
+    align-items: center;
     display: flex;
+    flex-direction: column;
     position: relative;
     z-index: 1;
+
+    @include respond-to(medium-screen) {
+      flex-direction: row;
+    }
+  }
+
+  .navLogoLink {
+    margin: 0 0 $spacePx 0;
   }
 
   .navLogo {
@@ -33,30 +47,54 @@
 
   .navListItem {
     list-style-type: none;
-    margin: 0 0 0 $spacePx;
+    margin: 0 $spacePx 0 0;
     padding: 0;
+
+    &:last-of-type {
+      margin: 0;
+    }
   }
 
   .navLink {
-    border-bottom: 3px solid rgba(0,0,0,0);
+    border-bottom: 0px solid rgba(0,0,0,0);
     color: $colorBlack;
+    font-size: px-to-rem(14);
     font-weight: 700;
     line-height: 1;
     padding: 0 0 $spacePx/2;
     text-decoration: none;
+    transition: all .2s ease-in-out;
+
+    @include respond-to(medium-screen) {
+      font-size: px-to-rem(16);
+    }
+
+    &:hover {
+      border-bottom: 3px solid rgba($colorSecondary, .22);
+    }
+
+    &:focus {
+      outline: none;
+    }
 
     &.active {
-      border-color: $colorSecondary;
+      border-bottom: 3px solid $colorSecondary;
+
+      &:hover {
+        border-bottom: 3px solid $colorSecondary;
+      }
     }
 
     &.navButton {
-      @include smallButton($colorSecondary);
-      border: 3px solid rgba(0,0,0,0);
+      @include respond-to(medium-screen) {
+        @include smallButton($colorSecondary);
+        border: 3px solid rgba(0,0,0,0);
 
-      &.active {
-        background: none;
-        border: 3px solid $colorSecondary;
-        color: $colorSecondary;
+        &.active {
+          background: none;
+          border: 3px solid $colorSecondary;
+          color: $colorSecondary;
+        }
       }
     }
   }

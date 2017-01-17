@@ -14,7 +14,7 @@ class Navigation extends Component {
       <Container size={'fullWidth'} className='Navigation'>
         <Container size={'maxWidth'}>
           <nav>
-            <IndexLink to='/'>
+            <IndexLink to='/' className='navLogoLink'>
               <Logo className='navLogo'/>
             </IndexLink>
             <ul className='navList'>

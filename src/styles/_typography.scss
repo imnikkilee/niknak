@@ -1,28 +1,40 @@
 h1 {
-  font-size: px-to-rem(64);
+  font-size: px-to-rem(48);
   font-family: $fontSans;
   font-weight: 700;
   line-height: 1.25;
   margin: 0;
+
+  @include respond-to(medium-screen) {
+    font-size: px-to-rem(64);
+  }
 }
 
 h2 {
-  font-size: px-to-rem(34);
+  font-size: px-to-rem(30);
   font-family: $fontSerif;
   font-weight: 700;
   line-height: 1.5;
   margin: 0;
+
+  @include respond-to(medium-screen) {
+    font-size: px-to-rem(34);
+  }
 }
 
 h3 {
   color: $colorSecondary;
-  font-size: px-to-rem(27);
+  font-size: px-to-rem(25);
   font-family: $fontSans;
   font-weight: 700;
   margin: 0;
 
   &.alt {
     color: $colorPrimary;
+  }
+
+  @include respond-to(medium-screen) {
+    font-size: px-to-rem(27);
   }
 }
 

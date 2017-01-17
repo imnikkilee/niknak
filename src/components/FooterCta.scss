@@ -7,8 +7,9 @@
 
   &:after {
     background-image: url(../images/abstract-pattern-2.png);
-    background-position: bottom center;
-    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 2000px auto;
     content: '';
     display: block;
     position: absolute;
