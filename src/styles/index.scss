@@ -13,4 +13,24 @@ body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+#root,
+#app,
+._stickyFooterPage {
+  height: 100%;
+}
+
+._stickyFooterWrapper {
+  min-height: 100%;
+  // magic number, height of footer for sticky footer
+  margin-bottom: -327px;
+
+  &:after {
+    content: '';
+    display: block;
+    // magic number, height of footer for sticky footer
+    height: 327px;
+  }
 }

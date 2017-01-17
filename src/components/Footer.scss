@@ -4,6 +4,9 @@
 .Footer {
   background: $colorAccent;
   padding: $spacePx*4 0;
+  // magic number, height of footer for sticky footer
+  height: 327px;
+  box-sizing: border-box;
 
   .innerContainer {
     display: flex;

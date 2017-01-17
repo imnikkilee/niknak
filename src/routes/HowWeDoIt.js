@@ -9,10 +9,12 @@ import ProcessGrid from '../components/ProcessGrid';
 class HowWeDoIt extends Component {
   render() {
     return (
-      <div>
-        <BlankHero className='opt3'/>
-        <ProcessGrid />
-        <FooterCta displayWhatWeDo displayContactUs/>
+      <div className='_stickyFooterPage'>
+        <div className='_stickyFooterWrapper'>
+          <BlankHero className='opt3'/>
+          <ProcessGrid />
+          <FooterCta displayWhatWeDo displayContactUs/>
+        </div>
         <Footer/>
       </div>
     )

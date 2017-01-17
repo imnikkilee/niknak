@@ -9,10 +9,12 @@ import WorkGrid from '../components/WorkGrid';
 class Home extends Component {
   render() {
     return (
-      <div>
-        <HomeHero/>
-        <WorkGrid/>
-        <FooterCta displayHowWeDoIt displayContactUs/>
+      <div className='_stickyFooterPage'>
+        <div className='_stickyFooterWrapper'>
+          <HomeHero/>
+          <WorkGrid/>
+          <FooterCta displayHowWeDoIt displayContactUs/>
+        </div>
         <Footer/>
       </div>
     )
