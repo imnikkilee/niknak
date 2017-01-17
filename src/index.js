@@ -10,6 +10,7 @@ import {
 // Routes
 import App from './App';
 import ContactUs from './routes/ContactUs';
+import ErrorPage from './routes/ErrorPage';
 import Home from './routes/Home';
 import HowWeDoIt from './routes/HowWeDoIt';
 
@@ -21,6 +22,7 @@ ReactDOM.render((
       <IndexRoute component={Home} />
       <Route path='/how-we-do-it' component={HowWeDoIt} />
       <Route path='/contact-us' component={ContactUs} />
+      <Route path='*' component={ErrorPage} />
     </Route>
   </Router>),
   document.getElementById('root')
