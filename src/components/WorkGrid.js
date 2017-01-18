@@ -35,7 +35,7 @@ class WorkGrid extends Component {
                   Invitations
                 </h3>
                 <p>
-                  Whether you’re throwing a surprise party or hosting a shower, we can help you tell your guests when and where the party’s at with custom invitations.
+                  Whether you’re throwing a surprise party or hosting a shower, we can help you let your guests know when and where the party’s at with custom invitations.
                 </p>
               </div>
               <img src={ImageWorkShower} className='inviteImage' alt='Bridal Shower Invitation'/>
