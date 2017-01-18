@@ -98,6 +98,14 @@
     height: auto;
   }
 
+  .workImageCaption {
+    font-size: px-to-rem(13);
+    font-family: $fontSerif;
+    color: rgba($colorBlack, .44);
+    margin: $spacePx/2 0 0 0;
+    display: block;
+  }
+
   // Invitations
 
   .inviteTextCol {
@@ -148,7 +156,7 @@
     }
   }
 
-  .wedSignImage {
+  .wedSignCol {
     width: 100%;
     margin: 0 0 $spacePx*2 0;
 
@@ -163,7 +171,7 @@
     }
   }
 
-  .wedEncolsuresCol {
+  .wedEnclosuresCol {
     width: 100%;
 
     @include respond-to(medium-screen) {

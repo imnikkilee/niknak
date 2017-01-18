@@ -33,7 +33,7 @@ class ProcessGrid extends Component {
             <div className='consTwoCol'>
               <p>This is also a great time to share any inspiration you’ve gathered, so we can get a sense of your style and personality.  Some great sources of inspiration are:</p>
               <ul>
-                <li>Pinterest boards you've put together</li>
+                <li><a href='https://www.pinterest.com/' target='_blank'>Pinterest</a> boards you've put together</li>
                 <li>designs you really love</li>
                 <li>color palettes</li>
                 <li>if we're designing for a wedding, your dress, flowers, venue, or anything else you've already picked out</li>

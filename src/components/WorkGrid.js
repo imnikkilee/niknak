@@ -61,7 +61,10 @@ class WorkGrid extends Component {
               <img src={ImageWorkWedSuite} className='wedSuiteImage' alt='Wedding Invitation Suite'/>
             </div>
             <div className='wedThreeRow'>
-              <img src={ImageWorkWedSign} className='wedSignImage' alt='Wedding Signage'/>
+              <div className='wedSignCol'>
+                <img src={ImageWorkWedSign} className='wedSignImage' alt='Wedding Signage'/>
+                <small className='workImageCaption'>image by <a href='http://www.fourwingsphotography.com/' target='_blank'>Four Wings Photography</a></small>
+              </div>
               <div className='wedEnclosuresCol'>
                 <img src={ImageWorkWedEnvelope} className='wedEnvelopeImage' alt='Wedding Invitation Envelope'/>
                 <img src={ImageWorkWedInvite} className='wedInviteImage' alt='Wedding Invitation'/>
