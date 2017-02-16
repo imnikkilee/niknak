@@ -24,7 +24,7 @@ class WorkGrid extends Component {
       <Container size='fullWidth' className='WorkGrid'>
         <Container size='maxWidth' className='innerContainer'>
           <h2 className='gridHeadline'>
-            We design custom paper goods for all the things in life worth celebrating!
+            We design custom paper goods for all the things in life worth celebrating.
           </h2>
 
           {/* Invitations */}
@@ -50,7 +50,7 @@ class WorkGrid extends Component {
                   Wedding Stationery
                 </h3>
                 <p>
-                  Your wedding stationery should be as  awesome as you are! That’s why we design  with your wants, needs, hopes, dreams, and budget in mind.
+                  Your wedding stationery should be as  awesome as you are. That’s why we design  with your wants, needs, hopes, dreams, and budget in mind.
                 </p>
                 <p>We’re happy to create invitation suites, printed envelopes, thank you cards, custom maps, signage, table numbers, and anything else your heart desires.
                 </p>

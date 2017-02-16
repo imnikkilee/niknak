@@ -2,7 +2,7 @@
 @import '../styles/variables.scss';
 
 .FooterCta {
-  background: $colorSecondAccent;
+  background: $colorAccent;
   position: relative;
 
   &:after {
@@ -16,7 +16,7 @@
     display: block;
     position: absolute;
     height: 100%;
-    opacity: .18;
+    opacity: .15;
     width: 100%;
   }
 

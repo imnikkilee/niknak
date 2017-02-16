@@ -14,7 +14,7 @@ form {
     font-size: px-to-rem(14);
     font-family: $fontSans;
     font-weight: 700;
-    color: $colorPrimary;
+    color: $colorSecondary;
     margin: 0 0 $spacePx/2 0;
     line-height: 1;
   }
@@ -25,7 +25,7 @@ form {
     display: block;
     -webkit-appearance: none;
     font-family: $fontSerif;
-    border: 2px solid rgba($colorPrimary, .22);
+    border: 2px solid rgba($colorSecondary, .22);
     transition: all .2s ease-in-out;
     border-radius: $borderRadius;
     font-size: px-to-rem(16);
@@ -35,7 +35,7 @@ form {
 
     &:focus {
       outline: none;
-      border: 2px solid rgba($colorPrimary, .55);
+      border: 2px solid rgba($colorSecondary, .55);
     }
 
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */

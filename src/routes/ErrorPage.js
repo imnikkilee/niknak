@@ -3,10 +3,8 @@ import React, {Component} from 'react';
 // Components
 import Container from '../components/Container';
 import Footer from '../components/Footer';
-import FooterCta from '../components/FooterCta';
 import BlankHero from '../components/BlankHero';
-import WorkGrid from '../components/WorkGrid';
-import {Link} from 'react-router';
+ import {Link} from 'react-router';
 
 // Styles
 import './ErrorPage.scss';

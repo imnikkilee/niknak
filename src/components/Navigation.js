@@ -23,7 +23,7 @@ class Navigation extends Component {
                   to='/'
                   className='navLink'
                   activeClassName='active'>
-                  what we do
+                  about
                 </IndexLink>
               </li>
               <li className='navListItem'>
@@ -31,8 +31,16 @@ class Navigation extends Component {
                   to='/how-we-do-it'
                   className='navLink'
                   activeClassName='active'>
-                  how we do it
+                  process
                 </Link>
+              </li>
+              <li className='navListItem'>
+                <a
+                  href='https://www.etsy.com/shop/niknakdsgn'
+                  target='_blank'
+                  className='navLink'>
+                  shop
+                </a>
               </li>
               <li className='navListItem'>
                 <Link

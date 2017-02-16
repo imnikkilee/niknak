@@ -2,7 +2,7 @@
 @import '../styles/variables.scss';
 
 .Footer {
-  background: $colorAccent;
+  background: $colorSecondAccent;
   padding: $spacePx*4 0;
   // magic number, height of footer for sticky footer
   height: 327px;
@@ -44,6 +44,7 @@
   }
 
   .navLink {
+    color: $colorPrimary;
     text-decoration: none;
     font-family: $fontSans;
     font-size: px-to-rem(14);
@@ -52,7 +53,7 @@
   .copyright {
     display: block;
     font-size: px-to-rem(12);
-    opacity: .33;
+    color: $colorSecondary;
     line-height: 1.75;
   }
 }

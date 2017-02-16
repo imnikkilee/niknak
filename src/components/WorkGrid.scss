@@ -101,7 +101,7 @@
   .workImageCaption {
     font-size: px-to-rem(13);
     font-family: $fontSerif;
-    color: rgba($colorBlack, .44);
+    color: $colorSecondary;
     margin: $spacePx/2 0 0 0;
     display: block;
   }

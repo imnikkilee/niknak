@@ -15,13 +15,13 @@
 
     &.formFailure {
       .contactHeadline {
-        color: $colorError;
+        color: $colorBlack;
       }
     }
 
     &.formSuccess {
       .contactHeadline {
-        color: $colorSecondary;
+        color: $colorBlack;
       }
     }
 
@@ -54,7 +54,7 @@
   }
 
   .submitButton {
-    @include button($colorSecondary);
+    @include button($colorPrimary);
   }
 
   .resetButton {

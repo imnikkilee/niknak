@@ -36,7 +36,7 @@
       content: '';
       display: block;
       position: absolute;
-      background: rgba($colorPrimary, .22);
+      background: rgba($colorSecondary, .22);
       height: 2px;
       width: 25%;
       bottom: 0;
@@ -64,7 +64,7 @@
     }
 
     @include respond-to(large-screen) {
-      border-bottom: 2px solid rgba($colorPrimary, .22);
+      border-bottom: 2px solid rgba($colorSecondary, .22);
       padding-bottom: $spacePx*5;
       margin-bottom: $spacePx*5;
 
