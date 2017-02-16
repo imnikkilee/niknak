@@ -33,6 +33,14 @@ class Footer extends Component {
               </li>
               <li className='navListItem'>
                 <Link
+                  href='https://www.etsy.com/shop/niknakdsgn'
+                  target='_blank'
+                  className='navLink'>
+                  shop
+                </Link>
+              </li>
+              <li className='navListItem'>
+                <Link
                   to='/contact-us'
                   className='navLink navButton'>
                   contact us
