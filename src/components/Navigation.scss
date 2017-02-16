@@ -40,19 +40,22 @@
     flex-grow: 1;
     font-family: $fontSans;
     font-size: px-to-rem(16);
-    justify-content: flex-end;
+    justify-content: center;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
+
+    @include respond-to(medium-screen) {
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+    }
   }
 
   .navListItem {
     list-style-type: none;
-    margin: 0 $spacePx 0 0;
+    margin: 0 $spacePx*.5 $spacePx*.75 $spacePx*.5;
     padding: 0;
-
-    &:last-of-type {
-      margin: 0;
-    }
+    white-space: nowrap;
 
     @include respond-to(medium-screen) {
       margin: 0 $spacePx*1.5 0 0;
@@ -69,12 +72,13 @@
     font-size: px-to-rem(14);
     font-weight: 700;
     line-height: 1;
-    padding: 0 0 $spacePx/2;
+    padding: 0 0 $spacePx*.25;
     text-decoration: none;
     transition: all .2s ease-in-out;
 
     @include respond-to(medium-screen) {
       font-size: px-to-rem(16);
+      padding: 0 0 $spacePx*.5;
     }
 
     &:hover {
