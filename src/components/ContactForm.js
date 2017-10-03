@@ -141,7 +141,7 @@ class ContactForm extends Component {
       return false;
     }
     $.ajax({
-      url: 'https://formspree.io/hello@niknak.design',
+      url: 'https://formspree.io/niknakdsgn@gmail.com',
       type: 'POST',
       data: formData,
       dataType: 'json',
